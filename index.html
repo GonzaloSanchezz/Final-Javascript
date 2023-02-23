@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <link rel="stylesheet" href="/style.css">
+    <div class="body">
+
+        <header class="header">
+
+            <h2 class="titulo">Verduleria Autoservicio</h2>
+            <a href="./clientes.html">Clientes</a>
+
+        </header> 
+
+        <main>
+
+            <h1 id="nameIn">Ingresa tu nombre por favor</h1>
+            <input type="text" id="nombre">
+            <h2 id="bienvenida"></h1>
+
+        </main>
+
+        <section>
+
+            <form id="formulario" action="">
+        
+                <h2>Ingresa Cantidad de Manzana</h2>
+                <input type="number" id="cantManzana">
+        
+                <h2>Ingresa Cantidad de Pera</h2>
+                <input type="number" id="cantPera">
+        
+                <h2>Ingresa Cantidad de Banana</h2>
+                <input type="number" id="cantBanana">
+        
+                <h2>Ingresa Cantidad de Mandarina</h2>
+                <input type="number" id="cantMandarina">
+        
+            </form>
+            <button id="botonTotal">Calcular Total</button>
+            <div id="cartelTotal">
+                <h2>TOTAL</h2>
+                <p id="total"></p>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="/app.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>
