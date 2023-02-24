@@ -47,8 +47,8 @@ const personas = [
     
     {
         id: 3,
-        cliente: nombre,
-
+        cliente: "Carlos",
+        compra: "5000"
     }
 ]
 
@@ -95,5 +95,6 @@ function suma(cantManzana, cantPera, cantBanana, cantMandarina){
 }
 
 botonTotal.onclick = () => {suma(cantManzana, cantPera, cantBanana, cantMandarina)}
+
 
 
