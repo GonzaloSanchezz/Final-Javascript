@@ -7,12 +7,11 @@ const pera = 40;
 const banana = 10; 
 const mandarina = 25;
 
-// array con viejos clientes
-
-const clientes = [{nombre: "juan", satisfaccion: 7}, {nombre: "marcelo", satisfaccion: 10}]
 
 // agregar nombre
 
+
+const nombre = document.getElementById('nombre')
 
 nombre.addEventListener("change", agregarNombre)
 
@@ -54,6 +53,7 @@ const personas = [
 
 const clientesJSON = JSON.stringify(personas)
 
+
 localStorage.setItem('personas', clientesJSON)
 
 // calculadora de precios
@@ -62,6 +62,8 @@ const form = document.getElementById('formulario')
 const botonTotal = document.getElementById('botonTotal')
 
 botonTotal.addEventListener('click', enviarForm)
+
+
 
 function enviarForm(e){
 
@@ -97,4 +99,22 @@ function suma(cantManzana, cantPera, cantBanana, cantMandarina){
 botonTotal.onclick = () => {suma(cantManzana, cantPera, cantBanana, cantMandarina)}
 
 
+// fetch
 
+
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(json =>{
+        document.getElementById('name').innerText = ('Nombre: ' +json[0].name)
+        document.getElementById('email').innerText = ('Email: ' +json[0].email)
+        document.getElementById('numero').innerText = ('Número: ' +json[0].phone)
+    })
+
+
+// time out
+
+setTimeout(() =>{
+    swal("Nuestro local esta a punto de cerrar, ¡Date prisa!", {
+        button: false,
+      });
+}, 10000)
